@@ -1,0 +1,65 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Подключение к ESPHome",
+        "data": {
+          "host": "Имя хоста или IP-адрес",
+          "port": "Порт TCP"
+        }
+      }
+    },
+    "error": {
+      "invalid_host": "Введите IP-адрес или имя хоста.",
+      "cannot_connect": "Котёл не ответил. Проверьте адрес и порт моста ESPHome."
+    },
+    "abort": {
+      "already_configured": "Этот адрес и порт уже настроены."
+    }
+  },
+  "entity": {
+    "switch": {
+      "power": {
+        "name": "Питание котла"
+      },
+      "heating": {
+        "name": "Отопление"
+      }
+    },
+    "binary_sensor": {
+      "flame": {
+        "name": "Пламя"
+      }
+    },
+    "sensor": {
+      "heating_temperature": {
+        "name": "Температура контура отопления"
+      },
+      "water_temperature": {
+        "name": "Температура горячей воды"
+      },
+      "pressure": {
+        "name": "Давление воды"
+      },
+      "mode": {
+        "name": "Режим работы",
+        "state": {
+          "idle": "Ожидание",
+          "heating": "Отопление",
+          "hot_water": "Горячая вода"
+        }
+      },
+      "error_code": {
+        "name": "Код ошибки протокола"
+      }
+    },
+    "number": {
+      "heating_target": {
+        "name": "Уставка отопления"
+      },
+      "water_target": {
+        "name": "Уставка горячей воды"
+      }
+    }
+  }
+}

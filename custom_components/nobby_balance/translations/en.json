@@ -1,0 +1,65 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to the ESPHome bridge",
+        "data": {
+          "host": "Host or IP address",
+          "port": "TCP port"
+        }
+      }
+    },
+    "error": {
+      "invalid_host": "Enter an IP address or hostname.",
+      "cannot_connect": "No boiler status received. Check the ESPHome bridge address and port."
+    },
+    "abort": {
+      "already_configured": "This address and port are already configured."
+    }
+  },
+  "entity": {
+    "switch": {
+      "power": {
+        "name": "Boiler power"
+      },
+      "heating": {
+        "name": "Central heating"
+      }
+    },
+    "binary_sensor": {
+      "flame": {
+        "name": "Flame"
+      }
+    },
+    "sensor": {
+      "heating_temperature": {
+        "name": "Heating water temperature"
+      },
+      "water_temperature": {
+        "name": "Hot water temperature"
+      },
+      "pressure": {
+        "name": "Water pressure"
+      },
+      "mode": {
+        "name": "Operating mode",
+        "state": {
+          "idle": "Idle",
+          "heating": "Heating",
+          "hot_water": "Hot water"
+        }
+      },
+      "error_code": {
+        "name": "Raw error code"
+      }
+    },
+    "number": {
+      "heating_target": {
+        "name": "Heating temperature setpoint"
+      },
+      "water_target": {
+        "name": "Hot water temperature setpoint"
+      }
+    }
+  }
+}
