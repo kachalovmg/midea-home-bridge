@@ -1,10 +1,10 @@
 {
   "domain": "nobby_balance",
-  "name": "Kentatsu Nobby Balance",
+  "name": "Midea Home Bridge",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/u236/homed-service-custom-midea",
+  "documentation": "https://github.com/kachalovmg/ha-nobby-balance",
   "integration_type": "device",
   "iot_class": "local_polling",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
