@@ -28,6 +28,14 @@
 
 Интеграция опрашивает котёл каждые пять секунд и восстанавливает TCP-соединение при следующем опросе после сбоя. Управление использует команды панели, описанные в исходнике HOMEd. HA обновляет состояние по телеметрии котла.
 
+## Совместимость устройств
+
+Подтверждённая модель — Kentatsu Nobby Balance с UART-профилем Midea `E6`. Для устройств других марок совместимость зависит от профиля протокола и прошивки конкретной модели.
+
+У семейства `E6` описаны передаваемые котлом пределы температур, дополнительные профили отопления и функции предварительного прогрева горячей воды. Поддержка этих полей на Nobby Balance пока не подтверждена. [Реализация E6 в midea-lan](https://github.com/wuwentao/midea-lan/blob/dd88a9920d11d39e1f5dc96034b631ba764f03a7/midealan/devices/e6/message.py)
+
+Для устройств со штатным Wi-Fi модулем нужен отдельный транспорт Midea LAN. Примеры профилей для кондиционеров, осушителей и водонагревателей есть в Homebridge и Midea AC LAN. [Homebridge Midea Platform](https://github.com/kovapatrik/homebridge-midea-platform) · [Midea AC LAN](https://github.com/wuwentao/midea_ac_lan)
+
 ## Исходный протокол и лицензия
 
 Кадры и отображение полей перенесены из [HOMEd Custom Midea, u236](https://github.com/u236/homed-service-custom-midea/tree/b72716d067c20e56e993045e0f2a79480feb1396), из файлов `device.cpp`, `device.h` и `devices/boiler.cpp`. Код распространяется по GNU GPL версии 3, см. [LICENSE](LICENSE).
